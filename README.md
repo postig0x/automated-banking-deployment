@@ -78,6 +78,8 @@ Deployed app:
 
 ## System Design Diagram
 
+![diagram](./screenshots/diagram.png)
+
 ## Issues/Troubleshooting
 
 When creating the Multibranch Pipeline item and attaching the github repo to Jenkins, I did not create the `system_resources_test.sh` file, so the Jenkins build failed in the `test` stage. After adding the file, it succeeded.
@@ -89,4 +91,3 @@ Optimization ideas found throughout the project will be shared in a list here:
 - Creating distributed nodes for Jenkins so that builds are automated through child nodes instead of the main node to enhance security (build processes running in the child nodes won't have the same privileges as the main node)
 - Configure more environment settings within the `eb create` command in the `Deploy` step of the Jenkinsfile for more granular control over how AWS handles instaces/volumes/DBs, etc.
 
-## Conclusion
